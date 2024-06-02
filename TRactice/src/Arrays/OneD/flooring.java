@@ -1,22 +1,18 @@
 package Arrays.OneD;
 
-public class Ceiling {
+public class flooring {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 6, 7, 8, 9};
-        int target = 5;
-        int ans = Ceil(array, target);
+        int[] array = {1, 2, 3, 4, 5, 7, 8, 9};
+        int target = 6;
+        int ans = floor(array,target);
         System.out.println(ans);
     }
 
-    static int Ceil(int[] array, int target) {
+    static int floor(int[] array, int target) {
         int start = 0;
         int end = array.length - 1;
-        boolean isAsc = array[end] > array[start];
         while (end >= start) {
             int mid = start + (end - start) / 2;
-            if (target == array[mid]) {
-                return mid;
-            }
             if (target < array[mid]) {
                 end = mid - 1;
             } else if (target > array[mid]) {
@@ -25,6 +21,6 @@ public class Ceiling {
                 return mid;
             }
         }
-        return start;
+        return end;
     }
 }
