@@ -9,6 +9,9 @@ public class Ceiling {
     }
 
     static int Ceil(int[] array, int target) {
+        if (target>array[array.length-1]){
+            return -1;
+        }
         int start = 0;
         int end = array.length - 1;
         boolean isAsc = array[end] > array[start];
@@ -25,6 +28,6 @@ public class Ceiling {
                 return mid;
             }
         }
-        return start;
+        return array[start];
     }
 }

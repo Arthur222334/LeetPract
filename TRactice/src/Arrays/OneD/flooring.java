@@ -9,6 +9,9 @@ public class flooring {
     }
 
     static int floor(int[] array, int target) {
+        if (target<array[array.length-1]){
+            return -1;
+        }
         int start = 0;
         int end = array.length - 1;
         while (end >= start) {
