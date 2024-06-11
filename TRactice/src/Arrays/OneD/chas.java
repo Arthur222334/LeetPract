@@ -13,6 +13,6 @@ public class chas {
             }
         }
         System.gc();
-        return letters[start] % letters.length;
+        return letters[start % letters.length];
     }
 }
